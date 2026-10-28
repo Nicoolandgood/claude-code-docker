@@ -1,0 +1,9 @@
+services:
+  claude-code:
+    build:
+      dockerfile: ./claude-code.Dockerfile
+    entrypoint: sleep infinity
+    working_dir: /workspace
+    volumes:
+      - ./workspace:/workspace
+      - ./.claude:/home/claude/.claude
