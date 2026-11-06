@@ -1,6 +1,8 @@
 services:
   claude-code:
     build:
+      args:
+        - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
       dockerfile: ./claude-code.Dockerfile
     entrypoint: sleep infinity
     working_dir: /workspace

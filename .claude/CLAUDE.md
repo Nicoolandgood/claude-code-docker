@@ -3,3 +3,6 @@ No Typescript. JS: JSDoc typing, function keyword for top-level, arrow functions
 # graphify
 - **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
 When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else.
+
+# ngrok
+You have access to ngrok by running "ngrok" in the CLI.

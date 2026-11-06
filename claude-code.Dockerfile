@@ -23,7 +23,11 @@ USER claude
 
 ENV SHELL="/bin/bash"
 
+ARG NGROK_AUTHTOKEN
+
 RUN wget -qO- https://astral.sh/uv/install.sh | /bin/sh && \
+    wget -qO- https://bin.ngrok.com/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz | tar -xz -C /$HOME/.local/bin/ && \
+    $HOME/.local/bin/ngrok config add-authtoken $NGROK_AUTHTOKEN && \
     $HOME/.local/bin/uv tool update-shell && \
     $HOME/.local/bin/uv tool install graphifyy && \
     $HOME/.local/bin/graphify install
