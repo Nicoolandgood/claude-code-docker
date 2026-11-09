@@ -1,5 +1,6 @@
 services:
   claude-code:
+    hostname: claude-code
     build:
       args:
         - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
