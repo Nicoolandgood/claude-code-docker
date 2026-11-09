@@ -12,6 +12,8 @@ RUN --mount=type=cache,target=/var/cache/apk,sharing=locked \
         bash \
         python3 \
         py3-pip \
+        nodejs \
+        npm \
     && \
     adduser claude -D && \
     echo 'permit nopass :wheel' > /etc/doas.d/doas.conf && \
